@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vendemos celulares, computadoras de escritorio y notebooks">
+    <meta name="keywords" content="tienda, online, celulares, computadoras de escritorio, notebooks">
     <title>Techland</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./main.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
 </head>
 <body>
-  <header>
+  <header class="header">
     <nav class="navbar navbar-expand-lg navbar-custom">
       <div class="container-fluid">
         <h2>Techland</h2>
@@ -28,30 +35,30 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="./pages/acerca.html" target="_blank">Acerca</a>
+              <a class="nav-link" href="./pages/acerca.html">Acerca</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pages/contactanos.html" target="_blank">Contactanos</a>
+              <a class="nav-link" href="./pages/contactanos.html">Contactanos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pages/productos.html" target="_blank">Productos</a>
+              <a class="nav-link" href="./pages/productos.html">Productos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pages/blog.html" target="_blank">Blog</a>
+              <a class="nav-link" href="./pages/blog.html">Blog</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-            <p class="precios">Los precios +bajos del mercado</p>
-        </header>
+      <p class="precios">Los precios +bajos del mercado</p>
+    </header>
 
     <main>
     
 
-    <br><hr><br>
+    <hr>
 
-        <section>
+        <section class="ofertas">
           <h2>Ofertas</h2>
           <div class="articulos">
             <div>
@@ -91,37 +98,61 @@
         <br><br>
 
         <h2>Clientes satisfechos</h2>
-        <br><br><br>
         <section class="comentarios">
             <h3>Carla peralta</h3>
             <h3>Rich Piana</h3>
             <h3>Ronnie Coleman</h3>
             <h3>Jay Cutler</h3>
 
-            <p class="cliente">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, eum tempora! Ducimus corporis cupiditate modi, vero consequatur dicta temporibus ipsa.</p>
+            <p class="cliente">Llegó en tiempo y forma, y todo funciona a la perfección. Muchas gracias por la atención y la rapidez en el servicio.  Y el mejor precio del mercado.</p>
 
-            <p class="cliente">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt fugiat aperiam veritatis repellat non delectus velit aliquid facilis! Vero, accusantium?</p>
+            <p class="cliente">Excelente atención!! Muy recomendables!! Envío a tiempo! Compra por internet super segura y confiable! Muchas gracias Techland! Obvio que les volvería a comprar!!</p>
 
-            <p class="cliente">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam facere vitae placeat molestias aut at nisi eveniet, laboriosam velit rerum.</p>
+            <p class="cliente">Excelente atención de las chicas, muy buena predisposición. Antes de ayer compré un Motorola G42 y muy buen teléfono, tienen los mejores precios que en MercadoLibre y Tiendas Oficiales.</p>
 
-            <p class="cliente">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat molestias rem rerum tenetur vel, libero itaque ducimus vero aperiam dignissimos?</p>
+            <p class="cliente">Tenía mis dudas porque no conocía la tienda, pero excelente todo. Hice la compra por la página a las 14:30hs y a las 17hs del mismo día ya tenía mí moto g42, en caja sellada y con garantía de 12meses, todo muy ágil.</p>
         </section>
     </main>
-
-    <br>
-
+    
     <footer class="footer">
+      <div class="footer__info">
         <div class="locales">
-            <h2>Locales</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dignissimos nostrum sapiente soluta, in obcaecati aliquid maxime? Sed modi blanditiis quisquam, ipsa eaque minima consectetur a, nostrum rerum itaque adipisci.</p>
+            <h3>Locales</h3>
+            <p> <strong>Paso del Bosque Shopping</strong>
+              Local 21/ Juan Pablo II 1470 (Av.Sorrento y Av. Circunvalacion) <strong> Rosario, Santa Fe.</strong></p>
+              <p><strong>Rivera Shopping</strong>
+                Dique 1. <strong>Santa Fe, Santa Fe.</strong></p>
         </div>
+        <div>
+          <p> Tarjetas de Crédito/Débito</p>
+          <img src="./Imagenes/tarjetas.svg" alt="tarjets">
+        </div>
+        <div>
+          <p>¡Seguinos!</p>
+          <div>
+          <img src="./Imagenes/twitter.svg" alt="twitter logo" width="90px"  class="redeSocial">
+          <img src="./Imagenes/facebook.png" alt="facebook logo" width="90px"  class="redeSocial"></div>
+        </div>
+        <div>
+          <h4>Códigos de descuento</h4>
+          <p>¡Suscribite ahora! Mantenete al tanto de todas nuestras PROMOS y obtené códigos personales de descuento </p>
+          <div>
+            <form action="" method="get" enctype="text/plain">
+              <input type=" text" name="" id="nombre" placeholder="Nombre">
+              <input type="email" name="" id="email" placeholder="Correo electrónico">
+            </form>
+            <button>Suscribirse</button>
+          </div>
+          </div>
+      </div>
 
-        <br><hr><br>
+        <hr>
 
-        <p class="tech">Techland</p>
-
-        <p>© 2022 Techland.  Todos los derechos reservados. </p>
-        <p>1717 Harrison St, San Francisco, CA 94103, USA</p>
+        <div>
+          <p class="tech">Techland</p>
+          <p>© 2022 Techland.  Todos los derechos reservados. </p>
+          <p>1717 Harrison St, San Francisco, CA 94103, USA</p>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
