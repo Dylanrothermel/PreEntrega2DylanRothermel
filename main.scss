@@ -78,20 +78,24 @@
 
         }
     }
-    .precios {
-        background-color: aqua;
-        text-align: center;
-        font-size: 60px;
+
+    .titulo {
+        overflow-x: hidden;
         position: relative;
-        top: 0px;
-        padding-top: 160px;
-        padding-bottom: 210px;
-        margin: 0;
+        text-align: center;
+        .titulo__precios {
+            color: white;
+            font-size: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 }
 
 @mixin grid12columnas {
-    display: grid;
+        display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-gap: 2rem;
         width: 100%;
@@ -113,11 +117,12 @@
 }
 
 .comentarios {
-    background-color: rgb(173, 165, 165);
+   background-color: #afacac;
     @include grid12columnas;
     margin-bottom: 100px;
     .cliente {
         grid-column-end: span 3;
+        text-align: start;
     }
 }
 
@@ -154,44 +159,6 @@
         background-color: red;
         border-radius: 20px;
         border: black;
-    }
-}
-
-@media (max-width: 560px) {
-    .ofertas {
-        grid-gap: 2rem 0;
-        .ofertas__articulo {
-            grid-column-end: span 12;
-        }
-      }
-
-    .comentarios {
-        grid-gap: 2rem 0;
-        text-align: start;
-        .cliente {
-            grid-column-end: span 12;
-        }
-    }
-    .footer {
-        .footer__info {
-            grid-gap: 2rem 0;
-            .footer__info__locales {
-                grid-column-end: span 12;
-            }
-            .footer__info__tarjetas {
-                grid-column-end: span 12;
-                img {
-                    width: 250px;
-                }
-            }
-            .footer__info__redes {
-                grid-column-end: span 12;
-            }
-            .footer__info__codigos {
-                grid-column-end: span 12;
-                grid-column: 1/12;
-            }
-        }
     }
 }
 
@@ -234,11 +201,78 @@
     }
 }
 
+@media (max-width: 560px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .header {
+        .titulo {
+            img {
+                width: 900px;
+            }
+            .titulo__precios {
+                font-size: 35px;
+            }
+        }
+    }
+    .ofertas {
+        grid-gap: 2rem 0;
+        img {
+            width: 50%;
+        }
+        .ofertas__articulo {
+            grid-column-end: span 12;
+        }
+    }
+
+    .comentarios {
+        grid-gap: 2rem 0;
+        text-align: start;
+        .cliente {
+            grid-column-end: span 12;
+        }
+    }
+    .footer {
+        .footer__info {
+            grid-gap: 2rem 0;
+            .footer__info__locales {
+                grid-column-end: span 12;
+            }
+            .footer__info__tarjetas {
+                grid-column-end: span 12;
+                img {
+                    width: 200px;
+                }
+            }
+            .footer__info__redes {
+                grid-column-end: span 12;
+                img {
+                    width: 100px;
+                }
+            }
+            .footer__info__codigos {
+                grid-column-end: span 12;
+                grid-column: 1/12;
+            }
+        }
+    }
+}
+
+
+
 /* Acerca */
 
 .header {
     .acerca_nosotros {
-        @extend .precios
+        background-color: aqua;
+        text-align: center;
+        font-size: 60px;
+        position: relative;
+        top: 0px;
+        padding-top: 160px;
+        padding-bottom: 210px;
+        margin: 0;
     
     }
     margin-bottom: 50px;
@@ -268,7 +302,6 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr); 
     grid-gap: 2rem;
-    width: 100%;
     padding: 2rem;
     align-items: center;
     justify-content:center;
@@ -280,19 +313,40 @@
     margin-bottom: 50px;
 }
 
+@media (max-width: 1100px) {
+    body {
+        overflow-x: hidden;
+    }
+    .acerca_miembros {
+        .miembros {
+            grid-column-end: span 3;
+        }
+    }
+}
+
 
 @media (max-width: 560px) {
     .acerca_miembros {
+        width: 70%;
+        margin: 15%;
         .miembros {
             grid-column-end: span 6;
-        }
+
+            }
     }
 }
 
 /* Contactanos */
 
 .contactanos_titulo {
-    @extend .precios
+    background-color: aqua;
+        text-align: center;
+        font-size: 60px;
+        position: relative;
+        top: 0px;
+        padding-top: 160px;
+        padding-bottom: 210px;
+        margin: 0;
 }
 
 .contactanos_intro {
@@ -333,6 +387,14 @@
     
 }
 
+@media (max-width:1100px) {
+    .contactanos_contactos {
+        .contacto {
+            grid-column-end: span 6;
+        }
+    }
+}
+
 @media (max-width: 560px) {
     .contactanos_contactos {
         .contacto {
@@ -340,6 +402,8 @@
         }
     }
 }
+
+
 
 
 /* Productos */
@@ -353,6 +417,10 @@
         margin-bottom: 50px;
     }
     .articulos_item {
+        grid-column-end: span 6;
+        box-shadow: rgba(0, 0, 0, 0.08) 0 0 2rem;
+    }
+    .articulos_item__celu {
         grid-column-end: span 6;
         box-shadow: rgba(0, 0, 0, 0.08) 0 0 2rem;
     }
@@ -371,8 +439,17 @@
 }
 @media (max-width: 560px) {
     .productos_articulos {
+        img {
+            width: 50%;
+        }
         .articulos_item {
             grid-column-end: span 12;
+        }
+        .articulos_item__celu {
+            grid-column-end: span 12;
+            img {
+                width: 70%;
+            }
         }
     }
 }
@@ -405,6 +482,9 @@
 }
 
 @media (max-width: 560px) {
+    img {
+        width: 100%;
+    }
     .blog__postsvisitados {
         grid-gap: 2rem 0;
         .blog__postsvisitados__post {
